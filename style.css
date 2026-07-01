@@ -27,9 +27,7 @@ img {
     display: block;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* navbar */
 
 header {
     width: 100%;
@@ -76,9 +74,7 @@ header {
     background: wheat;
 }
 
-/* =========================
-   HERO
-========================= */
+/* Hero */
 
 .hero {
     width: 90%;
@@ -121,9 +117,7 @@ header {
     background: #023e8a;
 }
 
-/* =========================
-   overview-section
-========================= */
+/* overview-section */
 
 .overview-section {
     display: flex;
@@ -150,9 +144,7 @@ header {
 }
 
 
-/* =========================
-   BOOKING SECTION
-========================= */
+/* booking section */
 
 .booking {
     max-width: 1400px;
@@ -394,9 +386,7 @@ form button:hover {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive */
 
 @media(max-width:768px) {
 
