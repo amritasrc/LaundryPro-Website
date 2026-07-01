@@ -364,7 +364,7 @@ input:focus {
 
 form button {
     border: none;
-    background: #5964ff;
+    background: #0077b6;
     color: #fff;
     padding: 15px;
     border-radius: 10px;
@@ -374,7 +374,7 @@ form button {
 }
 
 form button:hover {
-    background: #434ef2;
+    background: #023e8a;
 }
 
 #successMessage {
@@ -385,6 +385,48 @@ form button:hover {
     line-height: 1.5;
 }
 
+.newsletter{
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: #fff;
+    background-color: #0077b6;
+}
+
+.newsletter h2{
+    font-size: 2.5rem;
+}
+
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.newsletter-input input{
+    background:#68c9fe;
+    outline: none;
+    border: none;
+    color:#fff;
+    font-weight: 500;
+}
+
+.newsletter-input input::placeholder {
+  color: #fff;
+}
+
+.newsletter-input{
+    display: flex;
+    gap: 20px;
+}
+
+.newsletter button{
+    color: #5964ff;
+    background:#fff;
+    font-weight: 500;
+    width: 48%;
+}
 
 /* Responsive */
 
@@ -415,6 +457,15 @@ form button:hover {
 
     .overview-section div {
         margin-bottom: 20px;
+    }
+
+    .newsletter{
+        flex-direction: column;
+    }
+
+    .newsletter h2{
+        font-size: 1.8rem;
+        margin-bottom: 10px;
     }
 }
 
