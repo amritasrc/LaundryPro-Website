@@ -455,6 +455,39 @@ width: 140px;
     font-size: 20px;
 }
 
+footer{
+    background-color: #023e8a;
+    color: #fff;
+}
+
+.footer-container{
+    display: flex;
+    padding: 80px 30px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.footer-box h2{
+    font-size: 30px;
+}
+
+.footer-box h3{
+    font-weight: 500;
+}
+
+.footer-box p{
+    color: #cecece;
+}
+
+.footer-box a{
+    color: #cecece;
+}
+
+.footer-box i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
 /* Responsive */
 
 @media(max-width:768px) {
