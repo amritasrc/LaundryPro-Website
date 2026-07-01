@@ -531,6 +531,11 @@ footer{
     .quality-desc{
         flex-direction: column;
     }
+
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media(max-width:992px) {
