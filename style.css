@@ -428,6 +428,33 @@ form button:hover {
     width: 48%;
 }
 
+.quality-desc{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    gap: 40px;
+}
+
+.quality-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quality-card img{
+width: 140px;
+}
+
+.quality-card p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.quality-card h3{
+    font-size: 20px;
+}
+
 /* Responsive */
 
 @media(max-width:768px) {
@@ -466,6 +493,10 @@ form button:hover {
     .newsletter h2{
         font-size: 1.8rem;
         margin-bottom: 10px;
+    }
+
+    .quality-desc{
+        flex-direction: column;
     }
 }
 
