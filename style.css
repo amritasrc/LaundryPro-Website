@@ -51,6 +51,7 @@ header {
 .nav-links a {
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -99,12 +100,45 @@ header {
     color: #fff;
     padding: 15px 40px;
     border-radius: 40px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #005b8c;
 }
 
 .hero-img img {
     border-radius: 15px;
-    /* width: 700px; */
 }
+
+/* overview section */
+
+.overview-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding: 40px 20px;
+    background-color: #0077b6;
+    color: #fff;
+    align-items: center;
+}
+
+.overview-section h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.overview-section div {
+    align-items: center;
+    text-align: center;
+}
+
+.overview-section div h3 {
+    font-size: 1.5rem;
+}
+
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -131,8 +165,9 @@ header {
         font-size: 2rem;
     }
 
-    .hero-img img{
-        /* width: 400px; */
+    .overview-section {
+        flex-direction: column;
+        gap: 20px;
     }
 
 }
