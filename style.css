@@ -141,9 +141,10 @@ header {
 /* booking section */
 
 .booking {
-    width: 90%;
     margin: 30px auto;
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
     gap: 30px;
 }
 
@@ -159,33 +160,33 @@ header {
     color: #222;
 }
 
-.heading p{
+.heading p {
     color: #777;
     margin-bottom: 13px;
 }
 
-#serviceList{
+#serviceList {
     margin: 25px 0px;
 }
 
-.service-card{
+.service-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
 }
 
-.service-info{
+.service-info {
     display: flex;
     gap: 20px
 }
 
-.service-info span{
+.service-info span {
     color: #1987c3;
     font-weight: 600;
 }
 
-.add-btn{
+.add-btn {
     padding: 5px 10px;
     border: none;
     border-radius: 12px;
@@ -196,18 +197,114 @@ header {
     color: green;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     background-color: green;
     color: #fff;
 }
 
-.cart-info{
+.cart-info {
     margin-top: 25px;
     color: #1987c3;
 }
 
-.cart-section{
-    
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart {
+    background: #fff;
+    height: 300px;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+th {
+    text-align: left;
+    color: #555;
+}
+
+td {
+    padding: 12px 0;
+    color: #555;
+}
+
+.empty {
+    text-align: center;
+    color: #1987c3;
+    padding: 40px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 2px solid #ccc;
+}
+
+.total h3 {
+    color: #1987c3;
+}
+
+.book-box {
+    background: #fff;
+    height: 300px;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
+
+.book-box div{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.book-box h2{
+    margin-bottom: 15px;
+}
+
+.book-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 8px;
+}
+
+.book-box button{
+    border: none;
+    background: #0077b6;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.book-box button:hover {
+    background: #005b8c;
 }
 
 /* Quality Description Section */
@@ -349,6 +446,18 @@ footer {
         gap: 20px;
     }
 
+    .booking {
+        flex-direction: column;
+    }
+
+    .quality-desc {
+        flex-direction: column;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
     .footer-container {
         padding: 40px 30px;
         flex-direction: column;
@@ -357,13 +466,5 @@ footer {
 
     .footer-box {
         text-align: center;
-    }
-
-    .newsletter {
-        flex-direction: column;
-    }
-
-    .quality-desc {
-        flex-direction: column;
     }
 }
