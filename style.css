@@ -140,16 +140,74 @@ header {
 
 /* booking section */
 
-.booking{
+.booking {
+    width: 90%;
     margin: 30px auto;
     display: flex;
     gap: 30px;
 }
 
+.services {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
 
+.heading h1 {
+    font-size: 2.2rem;
+    color: #222;
+}
 
-.services{
+.heading p{
+    color: #777;
+    margin-bottom: 13px;
+}
 
+#serviceList{
+    margin: 25px 0px;
+}
+
+.service-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.service-info{
+    display: flex;
+    gap: 20px
+}
+
+.service-info span{
+    color: #1987c3;
+    font-weight: 600;
+}
+
+.add-btn{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    background: #c4ffc4;
+    color: green;
+}
+
+.add-btn:hover{
+    background-color: green;
+    color: #fff;
+}
+
+.cart-info{
+    margin-top: 25px;
+    color: #1987c3;
+}
+
+.cart-section{
+    
 }
 
 /* Quality Description Section */
@@ -157,6 +215,7 @@ header {
 .quality-desc {
     display: flex;
     justify-content: space-evenly;
+    background: #fff;
     /* align-items: center; */
     gap: 30px;
     padding: 40px;
@@ -172,7 +231,7 @@ header {
 
 
 .quality-card img {
-    width: 250px;
+    width: 220px;
 }
 
 /* newsletter section */
@@ -200,7 +259,7 @@ header {
 }
 
 .newsletter-input input::placeholder {
-    color: #f1f1f1;
+    color: #fff;
 }
 
 .newsletter button {
@@ -212,6 +271,7 @@ header {
     border: none;
     color: #0077b6;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .newsletter button:hover {
@@ -307,5 +367,3 @@ footer {
         flex-direction: column;
     }
 }
-
-
