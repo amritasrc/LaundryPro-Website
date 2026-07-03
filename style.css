@@ -333,7 +333,7 @@ td {
 
 /* newsletter section */
 
-.newsletter {
+.newsletter-section {
     background: #0077b6;
     padding: 40px;
     color: #fff;
@@ -341,7 +341,7 @@ td {
     justify-content: space-evenly;
 }
 
-.newsletter h2 {
+.newsletter-section h2 {
     font-size: 2.5rem;
 }
 
@@ -359,7 +359,7 @@ td {
     color: #fff;
 }
 
-.newsletter button {
+.newsletter-section button {
     background: #f1f1f1;
     padding: 10px 30px;
     width: 48%;
@@ -371,7 +371,7 @@ td {
     cursor: pointer;
 }
 
-.newsletter button:hover {
+.newsletter-section button:hover {
     background: #f4f4f4;
 }
 
@@ -454,7 +454,7 @@ footer {
         flex-direction: column;
     }
 
-    .newsletter {
+    .newsletter-section {
         flex-direction: column;
     }
 
