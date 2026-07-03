@@ -1,4 +1,8 @@
-
+(function () {
+    emailjs.init({
+        publicKey: "itx9JUGEKzunqJI45",
+    });
+})();
 
 const cart = [];
 
@@ -83,7 +87,7 @@ const renderCart = () => {
         <tr id="emptyRow">
             <td colspan="4" class="empty">
                No items added.
-        <   /td>
+        </td>
         </tr>`
 
         total.textContent = 0;
@@ -94,8 +98,10 @@ const renderCart = () => {
 
     let amount = 0;
 
-    cart.forEach((item, index)=>{
+    cart.forEach((item, index) => {
         amount = amount + item.price;
+        // console.log(amount);
+
 
         cartItems.innerHTML += `
         <tr>
@@ -108,23 +114,74 @@ const renderCart = () => {
     });
 
     total.textContent = amount;
-    // console.log(total);
-     
+
 }
 
+const bookingForm = document.getElementById("bookingForm");
+const successMessage = document.getElementById("message");
+
+bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (cart.length === 0) {
+        alert("Please add at least one service.");
+        return;
+    }
 
 
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    if (!fullName || !email || !phone) {
+        alert("Please fill all fields.");
+        return;
+    }
 
 
+    const services = cart
+        .map(item => `${item.name} - ₹${item.price}`)
+        .join("\n");
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
 
 
+    const templateParams = {
+        name: fullName,
+        email: email,
+        phone: phone,
+        services,
+        total
+    };
 
+    console.log(templateParams);
 
+    emailjs.send("service_t6n0y5i", "template_5sb54jc", templateParams)
 
-// (function () {
-//     emailjs.init({
-//         publicKey: "itx9JUGEKzunqJI45",
-//     });
-// })();
+        .then(() => {
+            message.innerHTML =
+                "Thank you For Booking the Service.";
+            successMessage.style.color = "green";
+        })
 
-//  emailjs.send("service_t6n0y5i", "template_5sb54jc", templateParams);
+        .catch((error) => {
+            console.log(error);
+            message.textContent =
+                "Something went wrong.";
+            message.style.color = "red";
+        });
+
+    resetBooking();
+});
+
+const resetBooking = () => {
+    cart.length = 0;
+    renderCart();
+    bookingForm.reset();
+    document.querySelectorAll(".service-card button").forEach(btn => {
+        btn.classList.remove("remove-btn");
+        btn.classList.add("add-btn");
+        btn.innerHTML = `+ Add Item
+`;
+    });
+}
+

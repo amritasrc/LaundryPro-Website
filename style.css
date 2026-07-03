@@ -174,11 +174,13 @@ header {
     justify-content: space-between;
     /* align-items: center; */
     padding: 15px;
+    /* gap: 60px; */
 }
 
 .service-info {
     display: flex;
-    gap: 20px
+    gap: 20px;
+    align-items: center;
 }
 
 .service-info span {
@@ -202,7 +204,7 @@ header {
     color: #fff;
 }
 
-.remove-btn{
+.remove-btn {
     padding: 5px 10px;
     border: none;
     border-radius: 12px;
@@ -213,7 +215,7 @@ header {
     color: red;
 }
 
-.remove-btn:hover{
+.remove-btn:hover {
     background-color: red;
     color: #fff;
 }
@@ -230,8 +232,10 @@ header {
 }
 
 .cart {
+    display: flex;
+    flex-direction: column;
     background: #fff;
-    height: 300px;
+    height: 340px;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
@@ -241,6 +245,11 @@ header {
     text-align: center;
     margin-bottom: 10px;
     color: #333;
+}
+
+.table-wrap {
+    flex: 1;
+    overflow-y: auto;
 }
 
 table {
@@ -290,17 +299,17 @@ td {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
 }
 
-.book-box div{
+.book-box div {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
 
-.book-box h2{
+.book-box h2 {
     margin-bottom: 15px;
 }
 
-.book-box input{
+.book-box input {
     width: 100%;
     padding: 10px 15px;
     border: 1px solid #ccc;
@@ -308,7 +317,7 @@ td {
     border-radius: 8px;
 }
 
-.book-box button{
+.book-box button {
     border: none;
     background: #0077b6;
     color: #fff;
@@ -321,6 +330,13 @@ td {
 
 .book-box button:hover {
     background: #005b8c;
+}
+
+#message {
+margin-top: 18px;
+color: green;
+text-align: center;
+font-weight: 600;
 }
 
 /* Quality Description Section */
@@ -466,14 +482,14 @@ footer {
         flex-direction: column;
     }
 
-    .service-card{
+    .service-card {
         display: block;
         gap: 10px;
         flex-direction: column;
         align-items: left;
     }
 
-    .service-info{
+    .service-info {
         margin-bottom: 10px;
     }
 
