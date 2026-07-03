@@ -31,8 +31,8 @@ addbtn.forEach(btn => {
         }
 
 
-        console.log("1111111111");
-        console.log(cart);
+        // console.log("1111111111");
+        // console.log(cart);
 
         btn.classList.remove("add-btn");
         btn.classList.add("remove-btn");
@@ -66,17 +66,51 @@ const removeService = (name) => {
         }
     })
 
-    console.log("222222222");
-    console.log(cart);
-    
+    // console.log("222222222");
+    // console.log(cart);
+
 
     renderCart();
 }
 
 const renderCart = () => {
 
-}
+    cartItems.innerHTML = "";
 
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+        <tr id="emptyRow">
+            <td colspan="4" class="empty">
+               No items added.
+        <   /td>
+        </tr>`
+
+        total.textContent = 0;
+
+        return;
+    }
+
+
+    let amount = 0;
+
+    cart.forEach((item, index)=>{
+        amount = amount + item.price;
+
+        cartItems.innerHTML += `
+        <tr>
+        <td>${index + 1}</td>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        </tr>
+        `
+
+    });
+
+    total.textContent = amount;
+    // console.log(total);
+     
+}
 
 
 
