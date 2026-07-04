@@ -35,9 +35,6 @@ addbtn.forEach(btn => {
         }
 
 
-        // console.log("1111111111");
-        // console.log(cart);
-
         btn.classList.remove("add-btn");
         btn.classList.add("remove-btn");
 
@@ -70,10 +67,6 @@ const removeService = (name) => {
         }
     })
 
-    // console.log("222222222");
-    // console.log(cart);
-
-
     renderCart();
 }
 
@@ -100,8 +93,6 @@ const renderCart = () => {
 
     cart.forEach((item, index) => {
         amount = amount + item.price;
-        // console.log(amount);
-
 
         cartItems.innerHTML += `
         <tr>
@@ -155,7 +146,6 @@ bookingForm.addEventListener("submit", function (e) {
         total
     };
 
-    console.log(templateParams);
 
     emailjs.send("service_t6n0y5i", "template_5sb54jc", templateParams)
 
@@ -191,8 +181,6 @@ newsletterForm.addEventListener("submit", function (e) {
         name: newsletterName,
         email: newsletterEmail,
     };
-
-    console.log(templateParams);
 
     emailjs.send("service_t6n0y5i", "template_q30uofa", templateParams)
 
