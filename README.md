@@ -10,6 +10,11 @@ A simple laundry service landing page built with **HTML, CSS, and JavaScript**. 
 - Booking form
 - EmailJS integration
 
+## 📸 Preview
+
+| ![](images/home.png) | ![](images/services.png) |
+| ![](images/booking.png) | ![](images/newsletter.png) |
+
 ## Tech Stack
 
 - HTML
