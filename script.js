@@ -118,7 +118,9 @@ const renderCart = () => {
 }
 
 const bookingForm = document.getElementById("bookingForm");
+const newsletterForm = document.getElementById("newsletterForm")
 const successMessage = document.getElementById("message");
+const newsletterMessage = document.getElementById("newsletterMessage");
 
 bookingForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -173,10 +175,48 @@ bookingForm.addEventListener("submit", function (e) {
     resetBooking();
 });
 
+
+newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+
+    const newsletterName = document.getElementById('newsletterName').value.trim();
+    const newsletterEmail = document.getElementById('newsletterEmail').value.trim();
+
+    if (!newsletterName || !newsletterEmail) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    const templateParams = {
+        name: newsletterName,
+        email: newsletterEmail,
+    };
+
+    console.log(templateParams);
+
+    emailjs.send("service_t6n0y5i", "template_q30uofa", templateParams)
+
+        .then(() => {
+            newsletterMessage.innerHTML =
+                "Thank you For Subscribing.";
+            newsletterMessage.style.color = "white";
+        })
+
+        .catch((error) => {
+            console.log(error);
+            newsletterMessage.textContent =
+                "Something went wrong.";
+            newsletterMessage.style.color = "red";
+        });
+
+    resetBooking();
+})
+
 const resetBooking = () => {
     cart.length = 0;
     renderCart();
     bookingForm.reset();
+    newsletterForm.reset();
     document.querySelectorAll(".service-card button").forEach(btn => {
         btn.classList.remove("remove-btn");
         btn.classList.add("add-btn");
