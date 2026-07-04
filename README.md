@@ -12,7 +12,12 @@ A simple laundry service landing page built with **HTML, CSS, and JavaScript**. 
 
 ## 📸 Preview
 
+| Home | Services |
+|------|----------|
 | ![](images/home.png) | ![](images/services.png) |
+
+| Booking | Newsletter |
+|---------|------------|
 | ![](images/booking.png) | ![](images/newsletter.png) |
 
 ## Tech Stack
